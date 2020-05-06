@@ -22,7 +22,7 @@ rl.on('line', (input) => {
   try {
     const data = input
       .match(/(?:[^\s']+|'[^']*')+/g)
-      .map((p) => transform(p));
+      .map((p) => transform(p, exprs));
 
     // consecutive commands
     let cs;
