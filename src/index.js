@@ -68,3 +68,8 @@ rl.on('line', (input) => {
   updatePrompt();
   rl.prompt();
 });
+
+rl.on('SIGINT', () => {
+  rl.clearLine();
+  rl.prompt();
+});
